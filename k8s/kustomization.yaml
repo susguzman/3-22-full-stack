@@ -1,0 +1,7 @@
+namespace: mycustomns
+
+resources:
+- frontend.yaml
+- backend.yaml
+- database.yaml
+- ns.yaml
