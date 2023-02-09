@@ -24,6 +24,10 @@ spec:
       labels:
         app: mydatabase
     spec:
+      securityContext:
+        runAsUser: 54321    # Oracle User 
+        runAsGroup: 54321   # Oinstall group
+        fsGroup: 54321      # Oinstall group
       volumes:
       - name: database-init
         configMap:
@@ -50,7 +54,7 @@ spec:
         resources:
           limits:
             memory: "2Gi"
-            cpu: "1"
+            cpu: "500m"
         ports:
         - containerPort: 1521
         volumeMounts:

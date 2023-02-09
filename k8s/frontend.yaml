@@ -26,10 +26,10 @@ spec:
     spec:
       containers:
       - name: myfrontend
-        image: susguzman/f3-frontend:0.1.0-alpine
+        image: susguzman/f3-frontend:0.1.0-alpine-gcp
         resources:
           limits:
             memory: "128Mi"
-            cpu: "250m"
+            cpu: "200m"
         ports:
         - containerPort: 80
